@@ -31,7 +31,7 @@ def visualize_graph(capacity, node_labels):
     # Використовуємо multipartite_layout для шарового розміщення
     pos = nx.multipartite_layout(G, subset_key="subset", align="horizontal")
 
-    # Малюємо граф з більшим розміром фігури
+    # Малюємо граф
     plt.figure(figsize=(20, 10))
     nx.draw(
         G,
@@ -231,5 +231,5 @@ visualize_graph(capacity, node_labels)
 source = 0
 sink = 21
 
-# Запускаємо алгоритм (after the graph visualization)
+# Запускаємо алгоритм (after graph visualization)
 edmonds_karp(capacity, source, sink)
